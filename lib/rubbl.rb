@@ -1,6 +1,6 @@
 require "rubbl/version"
+require "rubbl/client"
 
 module Rubbl
   class Error < StandardError; end
-  # Your code goes here...
 end

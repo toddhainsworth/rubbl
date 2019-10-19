@@ -1,5 +1,7 @@
-require "bundler/setup"
-require "rubbl"
+require 'bundler/setup'
+require 'webmock/rspec'
+require 'vcr'
+require 'rubbl'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +12,10 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  VCR.configure do |vcr_config|
+    vcr_config.cassette_library_dir = 'fixtures/cassettes'
+    vcr_config.hook_into :webmock
   end
 end

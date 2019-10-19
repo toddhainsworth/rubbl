@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://jsonplaceholder.typicode.com/posts/
+    body:
+      encoding: UTF-8
+      string: '{"title":"hello world","body":"hello world","userId":1}'
+    headers:
+      Authorization:
+      - Basic YXBpX3Rva2VuOmZvb2Jhcg==
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - jsonplaceholder.typicode.com
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 19 Oct 2019 08:55:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '81'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d9e3e3dc53de0da72285a1b0f37d9f29d1571475322; expires=Sun, 18-Oct-20
+        08:55:22 GMT; path=/; domain=.typicode.com; HttpOnly
+      X-Powered-By:
+      - Express
+      Vary:
+      - Origin, X-HTTP-Method-Override, Accept-Encoding
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Access-Control-Expose-Headers:
+      - Location
+      Location:
+      - http://jsonplaceholder.typicode.com/posts//101
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"51-R0M8GmLfiUN0ZKouaIxsb1WVlSc"
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5281885e0d7adf89-MEL
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "title": "hello world",
+          "body": "hello world",
+          "userId": 1,
+          "id": 101
+        }
+    http_version: 
+  recorded_at: Sat, 19 Oct 2019 08:55:21 GMT
+recorded_with: VCR 5.0.0
