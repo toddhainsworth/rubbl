@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.toggl.com/api/v8/workspaces
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.toggl.com
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 20 Oct 2019 10:19:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '390'
+      Cache-Control:
+      - no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0
+      Instance:
+      - time-web
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-We-Are-Hiring:
+      - https://toggl.com/jobs/
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '[{"id":1234567,"name":"Personal Workspace","profile":0,"premium":false,"admin":true,"default_hourly_rate":0,"default_currency":"USD","only_admins_may_create_projects":false,"only_admins_see_billable_rates":false,"only_admins_see_team_dashboard":false,"projects_billable_by_default":true,"rounding":1,"rounding_minutes":0,"api_token":"","at":"2019-04-26T08:26:48+00:00","ical_enabled":true}]'
+    http_version: 
+  recorded_at: Sun, 20 Oct 2019 10:19:36 GMT
+recorded_with: VCR 5.0.0

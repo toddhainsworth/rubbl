@@ -18,4 +18,10 @@ RSpec.configure do |config|
     vcr_config.cassette_library_dir = 'fixtures/cassettes'
     vcr_config.hook_into :webmock
   end
+
+  # Sandbox creds
+  config.before(:each) do
+    vars = YAML.load_file "config/rspec_vars.yml"
+    @api_key = vars['api_key']
+  end
 end
