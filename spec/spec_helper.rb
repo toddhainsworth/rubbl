@@ -21,9 +21,9 @@ RSpec.configure do |config|
 
   # Sandbox creds
   config.before(:each) do
-    if File.exists? "config/rspec_vars.yml"
-      vars = YAML.load_file "config/rspec_vars.yml"
-      @api_key = vars['api_key']
-    end
+    vars = {
+      'api_key' => ENV['RUBBL_API_KEY']
+    }
+    @api_key = vars['api_key']
   end
 end

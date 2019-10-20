@@ -10,4 +10,3 @@
 # rspec failure tracking
 .rspec_status
 .tags
-config/rspec_vars.yml
