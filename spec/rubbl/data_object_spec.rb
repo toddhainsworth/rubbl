@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe Rubbl::DataObject do
   describe 'method_missing' do
     context 'when the attribute exists' do
-      let(:obj) { Rubbl::DataObject.new(foo: 'bar') }
+      let(:obj) { Rubbl::DataObject.new({ "foo" => 'bar'}) }
       
       it 'returns the value of the attribute' do
         expect(obj.foo).to eq('bar')
