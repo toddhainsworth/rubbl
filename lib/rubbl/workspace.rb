@@ -15,17 +15,17 @@ module Rubbl
       client = Rubbl::Client.new(api_key)
       resp = client.get('/workspaces')
       body = resp.body.to_s
-      return body if body.empty?
+      return nil if body.empty?
       body = JSON.parse(body)
 
-      body.map { |ws| Workspace.new(ws['data'], api_key, client) }
+      body.map { |ws| Workspace.new(ws, api_key, client) }
     end
 
     def self.find(id, api_key)
       client = Rubbl::Client.new(api_key)
       resp = client.get("/workspaces/#{id}")
       body = resp.body.to_s
-      return body if body.empty?
+      return nil if body.empty?
       ws = JSON.parse(body)
 
       Workspace.new(ws['data'], api_key, client)
