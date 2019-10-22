@@ -1,5 +1,6 @@
 require "rubbl/version"
 require "rubbl/data_object"
+require "rubbl/api_object"
 require "rubbl/client"
 require "rubbl/workspace"
 

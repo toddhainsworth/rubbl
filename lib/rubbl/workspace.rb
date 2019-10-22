@@ -1,15 +1,8 @@
 require 'json'
 
 module Rubbl
-  class Workspace < DataObject
+  class Workspace < ApiObject
     attr_accessor :data
-
-    def initialize(data, api_key, client = nil)
-      @api_key = api_key
-      @client = client || Rubbl::Client.new(@api_key)
-
-      super(data)
-    end
 
     def self.all(api_key)
       client = Rubbl::Client.new(api_key)
@@ -32,6 +25,10 @@ module Rubbl
     end
 
     def users
+      return @users unless @users.nil?
+      resp = api_get("/workspaces/#{id}/users")
+      return [] if resp.nil?
+      @users = body.map { |u| User.new(u, @api_key, @client) }
     end
 
     def clients
