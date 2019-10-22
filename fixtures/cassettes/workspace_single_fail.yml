@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.toggl.com/api/v8/workspaces/1111111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.toggl.com
+      User-Agent:
+      - http.rb/4.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 20 Oct 2019 10:36:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '397'
+      Cache-Control:
+      - no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0
+      Instance:
+      - time-web2
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-We-Are-Hiring:
+      - https://toggl.com/jobs/
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 20 Oct 2019 10:36:11 GMT
+recorded_with: VCR 5.0.0
